@@ -1,0 +1,22 @@
+var sprite = new PIXI.projection.Sprite2d()
+
+sprite.proj.affine = PIXI.projection.AFFINE.AXIS_X; // return to affine after rotating
+//由錨點做X軸向(橫向)旋轉
+sprite.proj.affine = PIXI.projection.AFFINE.AXIS_Y;
+//由錨點做Y軸向(縱向)旋轉
+sprite.proj.affine = PIXI.projection.AFFINE.NONE;
+//由錨點做平面旋轉
+
+var container = new PIXI.projection.Container2d();
+
+let posX = container.toLocal(squareX.position, undefined, undefined, undefined, PIXI.projection.TRANSFORM_STEP.BEFORE_PROJ);
+
+PIXI.projection.TRANSFORM_STEP.BEFORE_PROJ //讓抓取的世界座標為螢幕上的座標
+
+container.proj.setAxisX(posX, squareX.factor);  //X軸向(橫向)的投影 (投影點, 投影方向和放大率(負數為向投影點放大))
+container.proj.setAxisY(posY, squareY.factor);  //Y軸向(縱向)的投影 (投影點, 投影方向和放大率(負數為向投影點放大))
+
+
+
+
+container.proj.setAxisY(pos, -squareFar.factor);
