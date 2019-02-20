@@ -35,7 +35,7 @@ export default class Plate {
 
             this.sprite[i].y = -spritePosY + 5;
 
-            this.container.addChild(this.sprite[i])
+            //this.container.addChild(this.sprite[i])
         }
 
 
