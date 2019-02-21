@@ -16,18 +16,12 @@ export default class Sky {
     }
 
     move(delta) {
-        //let pos = this.tiling.toLocal(this.tiling.position, undefined, undefined, undefined, PIXI.projection.TRANSFORM_STEP.BEFORE_PROJ);
         let pos = {};
         pos.x = this.width / 2;
         pos.y = this.height / 2 + 10;
 
-
         this.tiling.tilePosition.x = (this.tiling.tilePosition.x + delta) % this.tiling.texture.width;
 
         this.tiling.tileProj.setAxisY(pos, -1);
-
     }
-
-
-
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --mode development --watch",
-    "start": "webpack --mode development",
+    "start": "http-server -a localhost -o -p 8082",
     "deploy": "webpack --mode production"
   },
   "author": "",
